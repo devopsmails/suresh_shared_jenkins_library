@@ -1,8 +1,8 @@
-def call ( String ImageTag, String D_Hub_name, String ProjectName) {
+def call ( String project, string ImageTag, String hubUser) {
 
     sh """
-    sudo -S docker image build -t ${(D_Hub_name)}/${(ProjectName)} .
-    sudo -S docker image tag ${(D_Hub_name)}/${(ProjectName)}:${(ImageTag)}
-    sudo -S docker image tag ${(D_Hub_name)}/${(ProjectName)}:latest
+     sudo  docker image build -t ${(hubUser)}/${(project)} .
+     sudo  docker image tag ${(hubUser)}/${(project)} ${(hubUser)}/${(project)}:${ImageTag}
+     sudo  docker image tag ${(hubUser)}/${(project)} ${(hubUser)}/${(project)}:latest
     """
 }
