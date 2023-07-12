@@ -5,4 +5,4 @@ def call( String project, string ImageTag, String hubUser) {
      sudo  docker image tag ${(hubUser)}/${(project)} ${(hubUser)}/${(project)}:${ImageTag}
      sudo  docker image tag ${(hubUser)}/${(project)} ${(hubUser)}/${(project)}:latest
     """
-}
+} 
